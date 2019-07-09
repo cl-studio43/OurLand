@@ -1,0 +1,32 @@
+.slick-slide{
+    padding: 10px;
+}
+.slider{
+    margin: 0px 20px;
+}
+.slick-prev:before{
+    color: rgba(12,12,12,0.8);
+}
+
+.slick-next:before{
+    color: rgba(12,12,12,0.8);
+}
+.ant-modal-content{
+    background-color:unset !important
+}
+.ant-modal-close-x{
+    font-size: 18px !important
+}
+.anticon{
+    color:#FFF !important
+}
+.modalIframe{
+    width: 100% !important;
+    height: 90vh !important;
+}
+.ant-modal-content{
+    padding: 5vh 0 !important;
+}
+.ant-modal{
+    top:unset !important;
+}
