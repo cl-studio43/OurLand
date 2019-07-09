@@ -16,7 +16,7 @@
   }
   
   .white-background {
-    background-color: white !important;
+    background-color: #337ab7 !important;
   }
   
   .white-font {
@@ -59,6 +59,15 @@
   
   button:focus {
     outline: none !important;
+  }
+
+  .navigation{
+    display: none !important
+  }
+  @media(max-width: 990px){
+    .navigation{
+      display: flex !important
+    }
   }
   
   @media (min-width: 768px) {

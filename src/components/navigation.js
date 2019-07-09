@@ -9,7 +9,7 @@ import {
   import ScrollchorItem from "./scrollchor-item";
   import Scrollspy from "react-scrollspy";
   import "./navigation.css";
-  import ProgramNews from "./programnews"
+
 
 class Navigation extends Component {
     constructor(props) {
@@ -57,15 +57,15 @@ class Navigation extends Component {
     
       render() {
         const whiteBackground = this.state.hasScrolledDown
-          ? "white-background navbar-border navbar"
-          : "";
+          ? "white-background navbar-border navbar navigation"
+          : "navigation";
         // const fontColor = this.state.hasScrolledDown ? "blue-font" : "white-font";
-        const fontColor = "blue-font"
+        const fontColor = "white-font"
     
         return (
-          <Navbar className={whiteBackground} fixed={"top"} expand="sm">
+          <Navbar className={whiteBackground} fixed={"top"} expand="lg">
             <NavbarBrand href="/" className={fontColor}>
-              <ProgramNews />
+              
             </NavbarBrand>
             <NavbarToggler onClick={this.toggleNavbar}>
               <i className={`fa fa-navicon ${fontColor}`} />

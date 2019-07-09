@@ -34,6 +34,7 @@ export default class VideoList extends Component {
         this.state = {
             visible: false,
             currentModal: 0,
+            spinning:true
         };
     }
 
@@ -48,7 +49,6 @@ export default class VideoList extends Component {
             visible: false,
         });
     };
-
 
     render() {
         const videos = this.props.videos;
@@ -98,7 +98,17 @@ export default class VideoList extends Component {
             nextArrow: <SampleNextArrow />,
             prevArrow: <SamplePrevArrow />,
         };
-        console.log('videos', videos[this.state.currentModal].title)
+        console.log('videos', videos)
+        if( videos.length == 0){
+            return(
+                <div>
+                    <section id="videolist" className="section">
+                    <h2 className="text-center">深海筆記</h2>
+                    <div className="section-content"></div>
+                    </section>
+                </div>
+            )
+        }
         return (
             <div>
                 <section id="videolist" className="section">
@@ -122,26 +132,31 @@ export default class VideoList extends Component {
                                         </div>
                                     )
 
-                                })}
+                                })
+                                }
                             </Slider>
                         </div>
-                            <Modal
-                                title={null}
-                                visible={this.state.visible}
-                                footer={null}
-                                zIndex={1500}
-                                onCancel={this.handleCancel}
-                                width="unset"
-                                bodyStyle={{ height: "100vh", width: "100%" }}
-                            >
-                                <div style={{ padding: "3px 6px" }} >
+                        <Modal
+                            title={null}
+                            visible={this.state.visible}
+                            footer={null}
+                            zIndex={1500}
+                            onCancel={this.handleCancel}
+                            width="unset"
+                            bodyStyle={{ height: "100vh", width: "100%" }}
+                        >
+                            <div style={{ padding: "3px 6px" }} >
+                       
                                     <iframe
                                         className="modalIframe"
                                         title={videos[this.state.currentModal].title}
                                         src={`https://www.youtube.com/embed/${videos[this.state.currentModal].id}`}
                                         allowFullScreen />
+                                       
                                 </div>
-                            </Modal>
+                                
+                                
+                        </Modal>
                     </div>
                 </section>
             </div>

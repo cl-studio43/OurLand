@@ -55,7 +55,7 @@ class IndexPage extends Component {
         >
           <LandingPage />
           <div className="container-fluid main">
-            <Navigation />
+            <Navigation className="navigation" />
             <About />
             <GPS />
             <LiveStream />

@@ -3,6 +3,9 @@ import CoverVideo from "../videos/landing_page_video.mp4"
 // import CoverVideo from "../videos/landingPage_video.mp4"
 import Scrollchor from "react-scrollchor";
 import Cover from 'react-video-cover';
+import ProgramNews from "./programnews"
+import ScrollchorItem from "./scrollchor-item";
+import Scrollspy from "react-scrollspy";
 import "./landingpage.css"
 
 const style = {
@@ -14,6 +17,24 @@ const style = {
 };
 
 class LandingPage extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            hasScrolledDown: false,
+            isOpen: false
+        };
+        this.handleScroll = this.handleScroll.bind(this);
+    }
+
+    handleScroll() {
+        const bodyScrollTop =
+            document.documentElement.scrollTop || document.body.scrollTop;
+        let scrolledDownEnough = bodyScrollTop > 75 ? true : false;
+        this.setState({
+            hasScrolledDown: scrolledDownEnough
+        });
+    }
 
     render() {
         const videoOptions = {
@@ -30,10 +51,56 @@ class LandingPage extends Component {
                         videoOptions={videoOptions}
                         remeasureOnWindowResize
                     />
+                    <div className="title">
+                        Title
+                    </div>
+                    <div className="news">
+                        <ProgramNews />
+                    </div>
                     <div className="arrow animated bounceInDown">
                         <Scrollchor to="#livestream" className="btn" animate={{ duration: 500 }}>
                             <i className="fa fa-chevron-down" />
                         </Scrollchor>
+                    </div>
+                    <div className="menu">
+                        <Scrollspy
+                            items={["about", "gps_timetable", "livestream", "videolist", "oceanwiki", "guesscard"]}
+                            currentClassName="active"
+                            className={` ml-auto navbar-nav`}
+                            style={{padding:"0 15px"}}
+                            navbar
+                        >
+                            <div onClick={this.handleCloseCollapse}>
+                                <ScrollchorItem to="#about" className="nav-link">
+                                    企劃主題
+                                </ScrollchorItem>
+                            </div>
+                            <div onClick={this.handleCloseCollapse}>
+                                <ScrollchorItem to="#gps_timetable" className="nav-link">
+                                    GPS / 節目表
+                                </ScrollchorItem>
+                            </div>
+                            <div onClick={this.handleCloseCollapse}>
+                                <ScrollchorItem to="#livestream" className="nav-link">
+                                    直播
+                                </ScrollchorItem>
+                            </div>
+                            <div onClick={this.handleCloseCollapse}>
+                                <ScrollchorItem to="#videolist" className="nav-link">
+                                    深海筆記
+                                </ScrollchorItem>
+                            </div>
+                            <div onClick={this.handleCloseCollapse}>
+                                <ScrollchorItem to="#oceanwiki" className="nav-link">
+                                    科普小知識
+                                </ScrollchorItem>
+                            </div>
+                            <div onClick={this.handleCloseCollapse}>
+                                <ScrollchorItem to="#guesscard" className="nav-link">
+                                    我是誰
+                                </ScrollchorItem>
+                            </div>
+                        </Scrollspy>
                     </div>
                 </div>
             </div>
