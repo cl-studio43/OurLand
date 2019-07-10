@@ -1,7 +1,8 @@
-.videolistBG{
+.wiki{
     background-image: url("../images/FooterBG.jpg");
     background-position:center;
 }
+
 .slick-slide{
     padding: 10px;
 }
@@ -33,4 +34,11 @@
 }
 .ant-modal{
     top:unset !important;
+}
+.ant-card-cover img{
+    height: 23vh;
+    padding: 8px;
+}
+.ant-card-body{
+    height: 27vh;
 }

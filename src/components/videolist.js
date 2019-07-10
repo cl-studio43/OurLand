@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import Carousel, { Modal, ModalGateway } from 'react-images';
-import { Modal, Spin } from "antd"
+import { Modal } from "antd"
 import Slider from "react-slick";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
@@ -87,18 +87,6 @@ export default class VideoList extends Component {
                 }
             ]
         };
-
-        const modalSettings = {
-            dots: false,
-            infinite: false,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            swipeToSlide: true,
-            nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />,
-        };
-        console.log('videos', videos)
         if( videos.length == 0){
             return(
                 <div>
@@ -111,7 +99,7 @@ export default class VideoList extends Component {
         }
         return (
             <div>
-                <section id="videolist" className="section">
+                <section id="videolist" className="section videolistBG">
                     <h2 className="text-center">深海筆記</h2>
                     <div className="section-content">
                         <div className="slider">

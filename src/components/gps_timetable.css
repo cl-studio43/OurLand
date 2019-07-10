@@ -1,3 +1,7 @@
-.maps {
-
+.gps {
+    background-image: url("../images/FooterBG.jpg");
+    background-position:center;
+}
+.row{
+    height: 80vh;
 }
