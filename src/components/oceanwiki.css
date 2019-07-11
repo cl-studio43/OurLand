@@ -1,5 +1,5 @@
 .wiki{
-    background-image: url("../images/FooterBG.jpg");
+    background-color: #2f6c8f; 
     background-position:center;
 }
 
@@ -41,4 +41,9 @@
 }
 .ant-card-body{
     height: 27vh;
+}
+.info{
+    color:#fff !important;
+    margin: 20px;
+    padding: 10px 40px;
 }

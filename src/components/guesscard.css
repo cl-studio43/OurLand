@@ -1,0 +1,20 @@
+.guesscard{
+    background-color: #12436a; 
+    background-position:center;
+}
+.info{
+    color:#fff !important;
+    margin: 20px;
+    padding: 10px 40px;
+}
+.card{
+    position: relative;
+    width: 270px;
+    float:left;
+    margin: 10px;
+  }
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }

@@ -106,9 +106,10 @@ export default class OceanWiki extends Component {
             <div>
                 <section id="oceanwiki" className="section wiki">
                     <h2 className="text-center">深海探險去</h2>
-                    <p>深海，一般指水深200公尺以下，那裡黑暗、低溫、缺氧、壓力大、食物貧瘠，卻是地球上最
+                    <h5 className="info">深海，一般指水深200公尺以下，那裡黑暗、低溫、缺氧、壓力大、食物貧瘠，卻是地球上最
                         大的生態系。在台灣深海裡，東北海域有熱泉生態系；西南海域有冷泉生態系，想要一窺深海
-                        神祕面紗嗎，一起探險去!</p>
+                        神祕面紗嗎，一起探險去!
+                    </h5>
                     <div className="section-content">
                         <div className="slider">
                             <Slider {...settings}>

@@ -1,0 +1,13 @@
+.footerBG{
+    margin:0px;
+    padding:0px;
+    background:#fff url("../images/footerBG.jpg") center center no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.footerBlock{
+    height: 80vh;
+    width: 90%;
+    padding: 30px;
+}

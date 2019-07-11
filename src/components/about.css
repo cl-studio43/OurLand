@@ -1,0 +1,24 @@
+.aboutBG{
+    margin:0px;
+    padding:0px;
+    background:#fff url("../images/AboutBG.jpg") center center no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.wordBlock{
+    height: 80%;
+    width: 50%;
+    padding: 30px;
+}
+.aboutTitle{
+    color:#fff !important;
+    margin-bottom: 10px;
+}
+.paragraph1{
+    font-size: 18px;
+    margin-top:60px;
+}
+.paragraph2{
+    font-size: 18px;
+    margin-top:20px;
+}

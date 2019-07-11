@@ -1,6 +1,9 @@
 .videolistBG{
-    background-image: url("../images/FooterBG.jpg");
-    background-position:center;
+    margin:0px;
+    padding:0px;
+    background:#fff url("../images/videoListBG.jpg") center center no-repeat;
+    background-size: cover;
+    color: #fff;
 }
 .slick-slide{
     padding: 10px;
