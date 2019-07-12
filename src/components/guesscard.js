@@ -88,9 +88,17 @@ export default class GuessCard extends Component {
             <div>
                 <section id="guesscard" className="section guesscard">
                     <h2 className="text-center">猜猜我是誰</h2>
-                    <h5 className="info">為了生存，深海生物們個個具有獨特生存本事。食物稀少，得靠利齒大嘴，才能一口吞食獵物；為了適應高壓，或增加覓食優勢，演化成體型巨大；
+                    <div className="info">
+                    <h5 className="keyWords">為了生存，深海生物們個個具有獨特生存本事。 </h5>
+                    <p className="contents">
+                        食物稀少，得靠利齒大嘴，才能一口吞食獵物；為了適應高壓，或增加覓食優勢，演化成體型巨大；
+                    </p>
+                    <p className="contents">
                     暗不見光，所以眼睛特化、嗅覺敏銳；為引誘獵物、迷惑敵人，發光也能是利器。
-                    </h5>
+                    </p>
+                    </div>
+                    
+                   
                     <div className="section-content">
                         <div className="slider">
                             <Slider {...settings}>

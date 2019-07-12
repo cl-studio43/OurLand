@@ -7,7 +7,32 @@
 }
 
 .footerBlock{
-    height: 80vh;
+    height: 70vh;
     width: 90%;
-    padding: 30px;
+    margin: 0 auto;
+
+}
+
+.footerTitle{
+    text-align: center;
+}
+.logoArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectionArea{
+    color: #45525f;
+    font-weight: bold;
+    line-height: 14px;
+    text-align: center;
+    padding: 15px;
+}
+.imgFrame{
+    width: 10vw;
+    padding: 0 5px;
+}
+.imgFrameN{
+    width: 10%;
+    padding: 0 5px;
 }

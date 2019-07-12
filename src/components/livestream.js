@@ -6,7 +6,7 @@ export default class LiveStream extends Component {
         return (
             <div>
                 <section id="livestream" className="section">
-                <h2 className="text-center">直播</h2>
+                <h2 className="textTitle">深海研究直播</h2>
                     <div className="section-content liveStream">
                          <iframe
                              title="Livestream" 
