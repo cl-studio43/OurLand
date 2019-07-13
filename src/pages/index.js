@@ -17,6 +17,7 @@ import "font-awesome/css/font-awesome.min.css"
 import "./index.css"
 import 'antd/dist/antd.css'
 import { Spin } from 'antd'
+import axios from 'axios'
 
 const YouTube = require('simple-youtube-api');
 const youtube = new YouTube('AIzaSyCYgKk9u-PIz9MJ437BFu__WLILqo6KfT4');
@@ -27,6 +28,7 @@ class IndexPage extends Component {
     super(props);
     this.state = {
       videos: [],
+      programNews:"",
       spinning: true
     };
   }
@@ -43,6 +45,13 @@ class IndexPage extends Component {
       })
       .catch(console.log);
 
+      axios.get('https://spreadsheets.google.com/feeds/cells/1NKWSVKaFVnlRgDXNjQnMeZJcRcb3R32fJF5q0kRfsLI/1/public/values?alt=json')
+      .then(res => res.data.feed.entry[0].content.$t)
+      .then(res => this.setState({ programNews: res }))
+      .catch((error) => {
+        console.log(error);
+      });
+
   }
 
   render() {
@@ -53,7 +62,7 @@ class IndexPage extends Component {
           spinning={this.state.spinning}
           style={{ margin: "auto" }}
         >
-          <LandingPage />
+          <LandingPage programNews={this.state.programNews}/>
           <div className="container-fluid main">
             <Navigation className="navigation" />
             <About />

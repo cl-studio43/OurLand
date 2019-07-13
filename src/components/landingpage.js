@@ -3,10 +3,11 @@ import CoverVideo from "../videos/landing_page_video.mp4"
 // import CoverVideo from "../videos/landingPage_video.mp4"
 import Scrollchor from "react-scrollchor";
 import Cover from 'react-video-cover';
-import ProgramNews from "./programnews"
 import ScrollchorItem from "./scrollchor-item";
 import Scrollspy from "react-scrollspy";
 import "./landingpage.css"
+import titleIcon from "../images/titleIcon.png"
+import liveIcon from "../images/liveIcon.png"
 
 const style = {
     width: '100vw',
@@ -52,14 +53,14 @@ class LandingPage extends Component {
                         remeasureOnWindowResize
                     />
                     <div className="title">
-                        Title
+                        <img src={titleIcon} alt="尋找深海黑煙囪" />
                     </div>
                     <div className="news">
-                        <ProgramNews />
+                        {this.props.programNews}
                     </div>
                     <div className="arrow animated bounceInDown">
                         <Scrollchor to="#livestream" className="btn" animate={{ duration: 500 }}>
-                            <i className="fa fa-chevron-down" />
+                        <img src={liveIcon} alt="尋找深海黑煙囪" />
                         </Scrollchor>
                     </div>
                     <div className="menu">

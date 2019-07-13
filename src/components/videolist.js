@@ -91,8 +91,9 @@ export default class VideoList extends Component {
             return(
                 <div>
                     <section id="videolist" className="section">
-                    <h2 className="text-center">深海筆記</h2>
-                    <div className="section-content"></div>
+                    <h2 className="text-center">航海筆記</h2>
+                    <div className="section-content">無法擷取影片列表，請重新整理試試</div>
+
                     </section>
                 </div>
             )
@@ -100,7 +101,7 @@ export default class VideoList extends Component {
         return (
             <div>
                 <section id="videolist" className="section videolistBG">
-                    <h2 className="text-center">深海筆記</h2>
+                    <h2 className="text-center">航海筆記</h2>
                     <div className="section-content">
                         <div className="slider">
                             <Slider {...settings}>

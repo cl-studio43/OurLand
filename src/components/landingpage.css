@@ -58,11 +58,11 @@
 
 .arrow {
     position: absolute;
-    top: 50vh;
+    top: 60vh;
     display: block;
     left: 20%;
     margin-left: -50px;
-    width: 100px;
+    width: 150px;
     z-index: 1;
     box-sizing: border-box;
     transition: all 0.5s ease;
@@ -85,31 +85,35 @@
     box-shadow: none !important;
   }
 
-  .news{
-    position: absolute;
-    top: 40vh;
-    display: block;
-    left: 20%;
-    margin-left: -50px;
-    width: 100px;
-    z-index: 1;
-    box-sizing: border-box;
-    transition: all 0.5s ease;
-    animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s;
+.news{
+  position: absolute;
+  top: 40vh;
+  display: block;
+  left: 20%;
+  margin-left: -50px;
+  z-index: 1;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #2f679778;
+  border-radius: 5px;
+  color:#FFF;
 }
 .title{
   position: absolute;
-    top: 20vh;
-    display: block;
-    left: 20%;
-    margin-left: -50px;
-    width: 100px;
-    z-index: 1;
-    box-sizing: border-box;
-    transition: all 0.5s ease;
-    animation-delay: 0.5s;
-    -webkit-animation-delay: 0.5s;
+  top: 20vh;
+  display: block;
+  left: 20%;
+  margin-left: -50px;
+  width: 300px;
+  z-index: 1;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
 }
 .menu{
   background-color: #2f679778;
@@ -131,4 +135,9 @@
   .menu{
     display: none !important
   }
+}
+
+
+@media (max-width: 768px) {
+
 }
