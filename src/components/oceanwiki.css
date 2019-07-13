@@ -28,6 +28,7 @@
 .modalIframe{
     width: 100% !important;
     height: 90vh !important;
+    margin: 0 auto;
 }
 .ant-modal-content{
     padding: 5vh 0 !important;
@@ -46,4 +47,24 @@
     color:#fff !important;
     margin: 20px;
     padding: 10px 40px;
+    text-align: center;
 }
+
+.keyWords{
+    color: #fff;
+  }
+
+.contents{
+    padding: 10px 10px;
+    font-size: 16px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .phone{
+      display:block
+    }
+    .web{
+      display:none
+    }
+  }
